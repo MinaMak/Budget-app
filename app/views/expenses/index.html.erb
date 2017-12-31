@@ -1,6 +1,7 @@
 <%= link_to t('new_expense'), new_expense_path, class: "btn btn-primary pull-right" %>
 <%= link_to t('new_category'), new_category_path, class: "btn btn-primary pull-right" %>
 <%= label_tag :category %>
+<%= select_tag :category, options_for_select(categories_options, selected: @category.present? ? @category.id : nil), {allow_blank: true} %>
 <br>
 <br>
 
