@@ -8,10 +8,6 @@ class ExpensesController < ApplicationController
     end
   end
 
-  def show
-
-  end
-
   def new
     @expense = Expense.new
   end

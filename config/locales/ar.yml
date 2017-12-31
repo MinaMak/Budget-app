@@ -1,0 +1,16 @@
+ar:
+  new_expense: "اضافة مصروف"
+  new_category: "اضافة تصنيف"
+  are_you_sure: "هل انت متأكد ؟"
+  edit: "تعديل"
+  delete: "الغاء"
+  total: "المجموع"
+  errors: "أخطاء"
+  edit_category: "تعديل تصنيف"
+  expenses: "مصروفات"
+  edit_expense: "تعديل مصروف"
+  expense: 'مصروف'
+  name: "الاسم"
+  value: "القيمة"
+  date_head: "التاريخ"
+  category: "التصنيف"

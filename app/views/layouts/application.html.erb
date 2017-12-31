@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <%= select_tag :locale, options_for_select(locales_options, selected: locale), {allow_blank: false, class: "pull-right"} %>
+    <br><br>
     <%= yield %>
   </body>
 </html>

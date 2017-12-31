@@ -30,4 +30,17 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  new_expense: "Add expense"
+  new_category: "Add Category"
+  are_you_sure: "Are you sure ?"
+  edit: "Edit"
+  delete: "Delete"
+  total: "Total"
+  errors: "Errors"
+  edit_category: "Edit Category"
+  expenses: "Expenses"
+  edit_expense: "Edit Expense"
+  name: "Name"
+  value: "Value"
+  date_head: "Date"
+  category: "Category"

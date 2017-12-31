@@ -1,16 +1,16 @@
-<%= link_to 'New Expense', new_expense_path, class: "btn btn-primary pull-right" %>
-<%= link_to 'New Category', new_category_path, class: "btn btn-primary pull-right" %>
+<%= link_to t('new_expense'), new_expense_path, class: "btn btn-primary pull-right" %>
+<%= link_to t('new_category'), new_category_path, class: "btn btn-primary pull-right" %>
 <%= label_tag :category %>
-<%= select_tag :category, options_for_select(categories_options, selected: @category.present? ? @category.id : nil), {class: "select2", allow_blank: true} %>
+<%= select_tag :category, options_for_select(categories_options, selected: @category.present? ? @category.id : nil), {allow_blank: true} %>
 <br>
 <br>
 
 <table class="table table-bordered table-striped table-condensed table-hover table-responsive">
   <tr class="shown">
-    <th>Name</th>
-    <th>Value</th>
-    <th>Date</th>
-    <th>Category</th>
+    <th><%= t('name') %></th>
+    <th><%= t('value') %></th>
+    <th><%= t('date_head') %></th>
+    <th><%= t('category') %></th>
   </tr>
   <% @expenses.each do |expense| %>
       <tr>
@@ -18,12 +18,11 @@
         <td><%= expense.value %></td>
         <td><%= expense.date %></td>
         <td><%= expense.category.name %></td>
-        <td><%= link_to 'show', "#" %></td>
-        <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
-        <td><%= link_to 'Delete', expense, method: :delete, data: {confirm: 'Are you sure ?'} %></td>
+        <td><%= link_to t('edit'), edit_expense_path(expense) %></td>
+        <td><%= link_to t('delete'), expense, method: :delete, data: {confirm: t('are_you_sure')} %></td>
       </tr>
   <% end %>
 </table>
 <br>
-<h4><b>Total: </b> <%= sum_expenses_value %></h4>
+<h4><b><%= t('total') %>: </b> <%= sum_expenses_value %></h4>
 
