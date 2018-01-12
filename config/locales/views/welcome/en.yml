@@ -1,0 +1,7 @@
+en:
+  views:
+    welcome:
+      index:
+        title: 'Budget App'
+        register: "Register"
+        welcome_user: "Welcome"

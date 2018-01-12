@@ -1,0 +1,8 @@
+ar:
+  views:
+    welcome:
+      index:
+        title: 'الميزانية'
+        login: "Login"
+        register: "Register"
+        welcome_user: "Welcome "
