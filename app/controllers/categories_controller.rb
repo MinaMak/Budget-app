@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
 
   def index
-    @categories = Category.all
+    @categories = Category.where(user_id: current_user.id)
   end
 
   def new
@@ -14,6 +14,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new category_params
+    @category.user_id = current_user.id
     if @category.save
       redirect_to categories_path
     else
