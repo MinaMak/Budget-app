@@ -1,7 +1,7 @@
 class ExpensesController < ApplicationController
 
   def index
-    @expenses = Expense.all
+    @expenses = Expense.where(user_id: current_user.id)
     if params[:category_id].present?
       @category = Category.find params[:category_id]
       @expenses = @expenses.where category_id: params[:category_id]
@@ -18,6 +18,7 @@ class ExpensesController < ApplicationController
 
   def create
     expense = Expense.new expense_params
+    expense.user_id = current_user.id
     if expense.save
       redirect_to expenses_path
     else

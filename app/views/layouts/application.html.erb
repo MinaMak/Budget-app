@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BudgetApp</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>BudgetApp</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= select_tag :locale, options_for_select(locales_options, selected: locale), {allow_blank: false, class: "pull-right"} %>
-    <br><br>
-    <%= yield %>
-  </body>
+<body>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<%= select_tag :locale, options_for_select(locales_options, selected: locale), {allow_blank: false, class: "pull-right"} %>
+<br><br>
+<%= yield %>
+</body>
 </html>

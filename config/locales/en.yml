@@ -44,3 +44,7 @@ en:
   value: "Value"
   date_head: "Date"
   category: "Category"
+  views:
+    welcome:
+      index:
+        login: "Sign in"
