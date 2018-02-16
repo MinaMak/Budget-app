@@ -12,7 +12,17 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
-<%= select_tag :locale, options_for_select(locales_options, selected: locale), {allow_blank: false, class: "pull-right"} %>
+<div class="dropdown pull-right" style="margin-right: 20px">
+  <a class="dropdown-toggle count-info" data-toggle="dropdown" href="javascript:void(0);">
+    <%= t('language')%>
+  </a>
+
+  <ul class="dropdown-menu dropdown-alerts">
+    <li class="<%= I18n.locale == :ar ? 'disabled' : '' %>"><%= link_to 'arabic', url_for( :locale => 'ar'), 'data-no-turbolink' => true %></li>
+    <li class="divider"></li>
+    <li class="<%= I18n.locale == :en ? 'disabled' : '' %>"><%= link_to 'English', url_for( :locale => 'en'), 'data-no-turbolink' => true %></li>
+  </ul>
+</div>
 <br><br>
 <%= yield %>
 </body>
