@@ -12,8 +12,8 @@ default: &default
 development:
   <<: *default
   database: budget_dev
-  username: root
-  password: root
+  username: deploy
+  password: deploy
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
