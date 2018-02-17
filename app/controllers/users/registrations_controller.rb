@@ -11,9 +11,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     build_resource(sign_up_params)
 
-    if Rails.env.development?
-      resource.skip_confirmation!
-    end
+    # if Rails.env.development?
+    # end
+    resource.skip_confirmation!
     resource.save
     yield resource if block_given?
     if resource.persisted?
