@@ -1,0 +1,7 @@
+ar:
+  activerecord:
+    models:
+      category: تصنيف
+    attributes:
+      category:
+        name: الاسم

@@ -14,3 +14,11 @@ ar:
   value: "القيمة"
   date_head: "التاريخ"
   category: "التصنيف"
+  views:
+    welcome:
+      index:
+        welcome_user: "مرحبا"
+        title: "الميزانية"
+        login: "دخول"
+        register: "تسجيل الدخول"
+  language: "اللغة"

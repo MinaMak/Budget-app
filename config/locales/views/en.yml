@@ -47,4 +47,8 @@ en:
   views:
     welcome:
       index:
-        login: "Sign in"
+        welcome_user: "Welcome"
+        title: "Budget app"
+        login: "Login"
+        register: "Register"
+  language: "Language"

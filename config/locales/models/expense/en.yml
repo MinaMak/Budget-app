@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    models:
+      expense: Expense
+    attributes:
+      expense:
+        name: Name
+        value: Value
+        date: Date
+        category: Category

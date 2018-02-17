@@ -1,0 +1,16 @@
+ar:
+  activerecord:
+    models:
+      expense: تصنيف
+    attributes:
+      expense:
+        name: الاسم
+        value: القيمة
+        date: التاريخ
+        category: تصنيف
+    errors:
+      models:
+        expense:
+          attributes:
+            category:
+              required: التصنيف مطلوب

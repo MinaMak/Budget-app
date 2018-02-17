@@ -1,5 +1,4 @@
 <%= form_for @expense do |f| %>
-    <%= t('errors') if @expense.errors.any? %>
     <ul>
       <% @expense.errors.full_messages.each do |error| %>
           <li><%= error %></li>
