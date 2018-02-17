@@ -6,6 +6,5 @@ class AddUserIdToExpensesCategories < ActiveRecord::Migration[5.1]
 
     add_column :categories, :user_id, :integer
     add_index :categories, :user_id
-    User.all.categories.create name: "Other"
   end
 end
