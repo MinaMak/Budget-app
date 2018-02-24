@@ -22,3 +22,6 @@ ar:
         login: "دخول"
         register: "تسجيل الدخول"
   language: "اللغة"
+  categories: "تصنيفات"
+  submit_expense: "انشاء مصروف"
+  submit_category: "انشاء تصنيف"

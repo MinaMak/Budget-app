@@ -52,3 +52,6 @@ en:
         login: "Login"
         register: "Register"
   language: "Language"
+  categories: "Categories"
+  submit_expense: "Create Expense"
+  submit_category: "Create Category"

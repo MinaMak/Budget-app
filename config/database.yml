@@ -26,4 +26,4 @@ production:
   <<: *default
   database: db/production.sqlite3
   username: minamak2017@gmail.com
-  password: And@1234
+  password: Mina@123
