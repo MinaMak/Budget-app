@@ -55,3 +55,5 @@ en:
   categories: "Categories"
   submit_expense: "Create Expense"
   submit_category: "Create Category"
+  from_date: "From date"
+  to_date: "to date"

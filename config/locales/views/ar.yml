@@ -25,3 +25,5 @@ ar:
   categories: "تصنيفات"
   submit_expense: "انشاء مصروف"
   submit_category: "انشاء تصنيف"
+  from_date: "من تاريخ"
+  to_date: "الى تاريخ"
