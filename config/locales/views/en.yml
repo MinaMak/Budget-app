@@ -35,7 +35,7 @@ en:
   are_you_sure: "Are you sure ?"
   edit: "Edit"
   delete: "Delete"
-  total: "Total"
+  total_page: "Total page"
   errors: "Errors"
   edit_category: "Edit Category"
   expenses: "Expenses"
@@ -57,3 +57,7 @@ en:
   submit_category: "Create Category"
   from_date: "From date"
   to_date: "to date"
+  total_all: "Total all"
+  will_paginate:
+    previous: 'Previous'
+    next: 'Next'

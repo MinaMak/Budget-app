@@ -1,20 +1,23 @@
 <%= link_to t('new_expense'), new_expense_path, class: "btn btn-primary pull-right", style: 'margin: 10px' %>
 <%= link_to t('new_category'), new_category_path, class: "btn btn-primary pull-right", style: 'margin: 10px' %>
 <%= link_to t('categories'), categories_path, class: "btn btn-primary pull-right", style: 'margin: 10px' %>
+
 <div style="margin-right: 30px">
   <%= label_tag t('category') %>
   <%= select_tag :category, options_for_select(categories_options, selected: @category.present? ? @category.id : nil), {allow_blank: true} %>
 </div>
 
 <div style="display: none">
-  <%= select_tag :category, options_for_select(categories_options, selected: @category.present? ? @category.id : nil), {allow_blank: true} %>
+  <%= date_select :to_date, nil %>
   <%= label_tag t('to_date') %>
-  <%= select_tag :category, options_for_select(categories_options, selected: @category.present? ? @category.id : nil), {allow_blank: true} %>
+  <%= date_select :from_date, nil %>
   <%= label_tag t('from_date') %>
 </div>
 
 </br>
-
+<div class="digg_pagination">
+  <%= will_paginate @expenses,:previous_label => t('will_paginate.previous'), :next_label => t('will_paginate.next') %>
+</div>
 <table class="table table-bordered table-striped table-condensed table-hover table-responsive">
   <tr class="shown">
     <th><%= t('name') %></th>
@@ -33,6 +36,11 @@
       </tr>
   <% end %>
 </table>
+<div class="digg_pagination">
+  <%= will_paginate @expenses,:previous_label => t('will_paginate.previous'), :next_label => t('will_paginate.next') %>
+</div>
 <br>
-<h4><b><%= t('total') %>: </b> <%= sum_expenses_value %></h4>
+<h4><b><%= t('total_page') %>: </b> <%= sum_expenses_value %></h4>
+<br>
+<h4><b><%= t('total_all') %>: </b> <%= @sum_all_expenses %></h4>
 

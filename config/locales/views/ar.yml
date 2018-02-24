@@ -4,7 +4,7 @@ ar:
   are_you_sure: "هل انت متأكد ؟"
   edit: "تعديل"
   delete: "الغاء"
-  total: "المجموع"
+  total_page: "مجموع الصفحة"
   errors: "أخطاء"
   edit_category: "تعديل تصنيف"
   expenses: "مصروفات"
@@ -27,3 +27,7 @@ ar:
   submit_category: "انشاء تصنيف"
   from_date: "من تاريخ"
   to_date: "الى تاريخ"
+  total_all: "المجموع الكلى"
+  will_paginate:
+    previous: 'سابق'
+    next: 'تالى'
