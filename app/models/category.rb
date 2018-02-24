@@ -1,5 +1,6 @@
 class Category < ApplicationRecord
-  validates_presence_of :name
+  validates :name, presence: true, uniqueness: {scope: :user_id}
+
   has_many :expenses
   belongs_to :user
 end
