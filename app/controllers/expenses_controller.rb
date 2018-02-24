@@ -1,7 +1,7 @@
 class ExpensesController < ApplicationController
 
   def index
-    @expenses = Expense.where(user_id: current_user.id)
+    @expenses = Expense.where(user_id: current_user.id).order(:date)
     if params[:category_id].present?
       @category = Category.find params[:category_id]
       @expenses = @expenses.where category_id: params[:category_id]
