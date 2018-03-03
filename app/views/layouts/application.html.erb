@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="<%= current_user.present? ? "" : "auth" %>">
 <head>
   <title>BudgetApp</title>
   <%= csrf_meta_tags %>
@@ -7,23 +7,36 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<body class="<%= current_user.present? ? "" : "auth" %>">
 
 <div class="dropdown pull-right" style="margin-right: 20px">
   <a class="dropdown-toggle count-info" data-toggle="dropdown" href="javascript:void(0);">
-    <%= t('language')%>
+    <%= t('language') %><span class="caret"></span>
   </a>
 
   <ul class="dropdown-menu dropdown-alerts">
-    <li class="<%= I18n.locale == :ar ? 'disabled' : '' %>"><%= link_to 'عربى', url_for( :locale => 'ar'), 'data-no-turbolink' => true %></li>
+    <li class="<%= I18n.locale == :ar ? 'disabled' : '' %>"><%= link_to 'عربى', url_for(:locale => 'ar'), 'data-no-turbolink' => true %></li>
     <li class="divider"></li>
-    <li class="<%= I18n.locale == :en ? 'disabled' : '' %>"><%= link_to 'English', url_for( :locale => 'en'), 'data-no-turbolink' => true %></li>
+    <li class="<%= I18n.locale == :en ? 'disabled' : '' %>"><%= link_to 'English', url_for(:locale => 'en'), 'data-no-turbolink' => true %></li>
   </ul>
 </div>
 <br><br>
-<div style="margin: 10px;font-size: x-large">
+<div class="container-fluid" style="margin: 10px;font-size: 17px;">
+  <% if alert.present? %>
+    <div align="center">
+      <div class="alert alert-danger alert-dismissible fade in" style="width: 350px;">
+        <p class="alert"><%= alert %>
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </p>
+      </div>
+    </div>
+  <% end %>
+  <% if notice.present? %>
+    <div class="alert alert-success alert-dismissible fade in">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <p class="alert"><%= notice %></p>
+    </div>
+  <% end %>
   <%= yield %>
 </div>
 

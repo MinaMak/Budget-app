@@ -21,6 +21,8 @@ ar:
         title: "الميزانية"
         login: "دخول"
         register: "تسجيل الدخول"
+        sign_in_welcome: "دخول الى الموقع"
+        sign_up_welcome: "تسجيل الدخول الى الموقع"
   language: "اللغة"
   categories: "تصنيفات"
   submit_expense: "انشاء مصروف"

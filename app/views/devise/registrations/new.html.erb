@@ -1,34 +1,36 @@
-<h2>Sign up</h2>
+<%= devise_error_messages! %>
+<div align="center">
+  <h2 class="title"><%= t('views.welcome.index.sign_up_welcome') %></h2>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <div  class="auth-sign-in-form" style="height: 400px" align="left">
+      <div class="field">
+        <%= f.label :name %><br/>
+        <%= f.text_field :name, {autofocus: true, class: 'form-control input-block'} %>
+      </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
+      <div class="field mt">
+        <%= f.label :email %><br/>
+        <%= f.email_field :email, {autofocus: true, class: 'form-control input-block'} %>
+      </div>
 
-    <div class="field">
-      <%= f.label :name %><br/>
-      <%= f.text_field :name, autofocus: true %>
-    </div>
-
-    <div class="field">
-      <%= f.label :email %><br/>
-      <%= f.email_field :email, autofocus: true %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
+      <div class="field mt">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br/>
-      <%= f.password_field :password, autocomplete: "off" %>
+        <% end %><br/>
+        <%= f.password_field :password, {autocomplete: "off", class: 'form-control input-block'} %>
+      </div>
+
+      <div class="field mt">
+        <%= f.label :password_confirmation %><br/>
+        <%= f.password_field :password_confirmation, {autocomplete: "off", class: 'form-control input-block'} %>
+      </div>
+
+      <div class="actions mt">
+        <%= f.submit "Sign up", class: 'btn btn-success btn-block' %>
+      </div>
     </div>
 
-    <div class="field">
-      <%= f.label :password_confirmation %><br/>
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit "Sign up" %>
-    </div>
-<% end %>
-
+  <% end %>
+</div>
 <%= render "devise/shared/links" %>

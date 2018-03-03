@@ -14,3 +14,28 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.auth{
+  margin: 0;
+  height: 100%;
+  background: image_url("budget-organizer.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.auth-sign-in-form {
+  border: 1px solid #d8dee2;
+  border-radius: 5px;
+  width: 350px;
+  height: 350px;
+  padding: 20px;
+  background-color: silver;
+  opacity: 0.6;
+}
+
+.title {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.mt {
+  margin-top: 15px;
+}

@@ -51,6 +51,8 @@ en:
         title: "Budget app"
         login: "Login"
         register: "Register"
+        sign_in_welcome: "Sign in to Budget-Organizer"
+        sign_up_welcome: "Sign up for Budget-Organizer"
   language: "Language"
   categories: "Categories"
   submit_expense: "Create Expense"
