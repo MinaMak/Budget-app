@@ -33,3 +33,4 @@ ar:
   will_paginate:
     previous: 'سابق'
     next: 'تالى'
+  filter: "فلتر"

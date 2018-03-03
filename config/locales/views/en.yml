@@ -63,3 +63,4 @@ en:
   will_paginate:
     previous: 'Previous'
     next: 'Next'
+  filter: "Filter"
