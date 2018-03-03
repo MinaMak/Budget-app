@@ -7,7 +7,7 @@
 
   <div class="row" style="margin-right: 30px">
     <%= label_tag t('category') %>
-    <%= select_tag :category, options_for_select(categories_options, selected: @category.present? ? @category.id : nil), {allow_blank: true} %>
+    <%= select_tag :category, options_for_select(categories_options), {allow_blank: true} %>
   </div>
 
   <div class="row">
