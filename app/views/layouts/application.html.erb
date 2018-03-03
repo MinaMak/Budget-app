@@ -24,17 +24,14 @@
 <div class="container-fluid" style="margin: 10px;font-size: 17px;">
   <% if alert.present? %>
     <div align="center">
-      <div class="alert alert-danger alert-dismissible fade in" style="width: 350px;">
-        <p class="alert"><%= alert %>
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        </p>
+      <div class="alert alert-danger fade in " style="width: 350px;">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><%= alert %>
       </div>
     </div>
   <% end %>
   <% if notice.present? %>
     <div class="alert alert-success alert-dismissible fade in">
-      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      <p class="alert"><%= notice %></p>
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><%= notice %>
     </div>
   <% end %>
   <%= yield %>
